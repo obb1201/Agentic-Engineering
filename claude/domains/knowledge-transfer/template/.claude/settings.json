@@ -1,0 +1,59 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git -C source log *)",
+      "Bash(git -C source show *)",
+      "Bash(git -C source rev-parse *)",
+      "Bash(tf history *)",
+      "Bash(tf changeset *)"
+    ],
+    "deny": [
+      "Edit(/source/**)",
+      "Read(/**/.env)",
+      "Read(/**/*.pfx)",
+      "Read(/**/*.publishsettings)",
+      "Read(/**/*.pubxml)",
+      "Read(/**/appsettings.Production.json)",
+      "Bash(git push *)",
+      "Bash(git -C source commit *)",
+      "Bash(git -C source checkout *)",
+      "Bash(git -C source reset *)",
+      "Bash(tf checkin *)",
+      "Bash(tf checkout *)",
+      "Bash(tf edit *)",
+      "Bash(tf delete *)",
+      "Bash(tf get *)",
+      "Bash(rm -rf *)",
+      "Bash(Remove-Item *)",
+      "WebFetch",
+      "WebSearch"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard-writes.ps1\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"$CLAUDE_PROJECT_DIR/.claude/hooks/check-citations.ps1\"",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}

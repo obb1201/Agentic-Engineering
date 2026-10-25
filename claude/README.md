@@ -13,3 +13,4 @@ Harness engineering with Anthropic's Claude, mainly through Claude Code.
 ## Domain harnesses
 
 - [Legacy migration](domains/legacy-migration/): port a legacy application to a new stack with identical behavior, one slice at a time.
+- [Knowledge transfer](domains/knowledge-transfer/): hand a system over to a new vendor at the end of a contract, with docs where every fact cites the code or an expert interview.
