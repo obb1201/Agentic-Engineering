@@ -9,3 +9,7 @@ Harness engineering with Anthropic's Claude, mainly through Claude Code.
 | Permissions and limits | `.claude/settings.json` permission rules and modes |
 | Checking work | Hooks, subagent reviewers, tests |
 | Delegation | Subagents (`.claude/agents/`) and workflows |
+
+## Domain harnesses
+
+- [Legacy migration](domains/legacy-migration/): port a legacy application to a new stack with identical behavior, one slice at a time.

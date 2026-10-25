@@ -12,9 +12,11 @@ Expect content to be a mix of notes, harness configuration (CLAUDE.md / AGENTS.m
 
 There is no code, build system, or tests yet. Material specific to one harness goes in its folder: `claude/`, `codex/`, or `muse/`. `README.md` defines harness engineering using seven pieces (tools, information, permissions, instructions, checking work, limits, and failure handling). Organize each harness folder around those same pieces so the harnesses can be compared.
 
+A domain harness for one harness goes in `<harness>/domains/<domain>/`, for example `claude/domains/legacy-migration/`. Each one has a `README.md` (the guide), `design-decisions.md` (the choices it is built on), `template/` (files to copy into a real project), and `experiments/log.md` (trial-run results).
+
 As the repo grows, update this file with:
 
-- Where domain practices and experiments that span harnesses belong
+- Where experiments that span harnesses belong
 - Commands to run any experiments, scripts, or tests
 - Conventions for documenting a practice so it can be compared across harnesses and domains
 

@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet restore *)",
+      "Bash(dotnet build *)",
+      "Bash(dotnet test *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git switch -c migrate/*)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ],
+    "deny": [
+      "Edit(/legacy/**)",
+      "Read(/**/appsettings.Production.json)",
+      "Read(/**/.env)",
+      "Bash(git push *)",
+      "Bash(git reset --hard *)",
+      "Bash(git merge *)",
+      "Bash(rm -rf *)",
+      "Bash(Remove-Item *)",
+      "Bash(dotnet ef database *)",
+      "Bash(az *)",
+      "Bash(kubectl *)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"$CLAUDE_PROJECT_DIR/.claude/hooks/run-checks.ps1\"",
+            "timeout": 600
+          }
+        ]
+      }
+    ]
+  }
+}
