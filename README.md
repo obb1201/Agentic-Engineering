@@ -4,7 +4,9 @@ Studying and practicing **harness engineering** across Claude Code, OpenAI Codex
 
 ## What is harness engineering?
 
-> Harness engineering is building the system around an AI model so it can do useful work safely and reliably.
+In one sentence:
+
+> Harness engineering is building the tools, connections, rules, security, memory, and checks that allow an AI agent to safely work with real systems.
 
 ### The new hire
 
