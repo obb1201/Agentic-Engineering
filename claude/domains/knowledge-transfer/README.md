@@ -79,6 +79,7 @@ This harness is organized around the seven pieces in the repo [README](../../../
 6. Ask for the outline. Review and approve `docs/kt/outline.md`, and have experts write the expected answers in `test-questions.md`.
 7. For each document, ask: *"Prepare the interview for the next document."* Run the interview, paste the answers, then ask: *"Process the interview and draft the document."*
 8. When the documents are approved, ask: *"Build the shadow plan."* During shadowing, paste session notes and ask Claude to process them.
+9. Throughout, note interventions and surprises in `docs/kt/harness-notes.md`. When a document is approved and at the end, copy the lessons, anonymized, into this repo's [experiments/log.md](experiments/log.md).
 
 ## Known gaps in version 1
 

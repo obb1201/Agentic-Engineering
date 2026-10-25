@@ -24,6 +24,7 @@ Developers at <NEW_VENDOR> who know the stack (<STACK, e.g. .NET, SQL Server, Az
   - `interviews/`: interview question sheets and the expert's answers
   - `shadow-plan.md`: shadowing tasks and feedback
   - `doc-checklist.md`: what "done" means for a document
+  - `harness-notes.md`: notes on how this harness performed. Not handed over.
 
 ## What must never go in the docs
 
@@ -74,6 +75,7 @@ Follow the skill for each phase:
 - **The code and an interview disagree:** leave the fact out and add a question. The expert decides which one is right.
 - **A hook keeps failing:** after **3** failed attempts to fix the same problem, stop. Write a blocker in `open-questions.md` covering what fails, what you tried and your best guess at the cause.
 - **Before you say a document is done,** run the `doc-reviewer` and `cold-reader` subagents and report their real results.
+- **When a human corrects or redirects you, or a hook blocks you,** add one line to `harness-notes.md`.
 
 ## Commands
 
