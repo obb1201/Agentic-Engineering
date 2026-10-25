@@ -18,6 +18,12 @@ As the repo grows, update this file with:
 - Commands to run any experiments, scripts, or tests
 - Conventions for documenting a practice so it can be compared across harnesses and domains
 
+## Working rules
+
+- Write in clear, simple English, in code comments, docs and replies.
+- If a requirement is unclear, ask the user key questions before proceeding.
+- Record changes in the change log in the `docs/` folder (`docs/CHANGELOG.md`). Add an entry whenever you make a notable change.
+
 ## Environment
 
 - Windows 11. PowerShell is the primary shell, and Git Bash is also available.
